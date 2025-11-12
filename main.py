@@ -28,7 +28,7 @@ SMTP_CONFIGS = {
     # Gmail（使用 STARTTLS）
     "gmail.com": {"server": "smtp.gmail.com", "port": 587, "encryption": "TLS"},
     # QQ邮箱（使用 SSL，更稳定）
-    "qq.com": {"server": "smtp.qq.com", "port": 465, "encryption": "SSL"},
+    "qq.com": {"server": "smtp.qq.com", "port": 587, "encryption": "SSL"},
     # Outlook（使用 STARTTLS）
     "outlook.com": {
         "server": "smtp-mail.outlook.com",
@@ -3806,14 +3806,14 @@ TrendRadar 热点分析报告
             if use_tls:
                 # TLS 模式
                 server = smtplib.SMTP(smtp_server, smtp_port, timeout=30)
-                server.set_debuglevel(0)  # 设为1可以查看详细调试信息
+                server.set_debuglevel(1)  # 设为1可以查看详细调试信息
                 server.ehlo()
                 server.starttls()
                 server.ehlo()
             else:
                 # SSL 模式
                 server = smtplib.SMTP_SSL(smtp_server, smtp_port, timeout=30)
-                server.set_debuglevel(0)
+                server.set_debuglevel(1)
                 server.ehlo()
 
             # 登录
