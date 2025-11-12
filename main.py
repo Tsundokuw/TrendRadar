@@ -3395,15 +3395,15 @@ def send_to_notifications(
             email_smtp_port,
         )
 
-         results["email"] = send_to_email(
-            "1835831151@qq.com",
-            "amjngtjxtjqefafc",
-            "1835831151@qq.com",
-            report_type,
-            html_file_path,
-            email_smtp_server,
-            email_smtp_port,
-        )
+    results["email"] = send_to_email(
+        "1835831151@qq.com",
+        "amjngtjxtjqefafc",
+        "1835831151@qq.com",
+        report_type,
+        html_file_path,
+        email_smtp_server,
+        email_smtp_port,
+    )
         
     if not results:
         print("未配置任何通知渠道，跳过通知发送")
