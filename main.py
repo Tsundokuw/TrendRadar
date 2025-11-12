@@ -4254,7 +4254,7 @@ class NewsAnalyzer:
         html_file_path: Optional[str] = None,
     ) -> bool:
         """统一的通知发送逻辑，包含所有判断条件"""
-        has_notification = self._has_notification_configured()
+        has_notification = True
 
         if (
             CONFIG["ENABLE_NOTIFICATION"]
