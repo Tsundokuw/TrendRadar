@@ -3742,7 +3742,7 @@ def send_to_email(
             smtp_port = int(custom_smtp_port)
             # 根据端口判断加密方式：465=SSL, 587=TLS
             if smtp_port == 465:
-                use_tls = True  # SSL 模式（SMTP_SSL）
+                use_tls = False  # SSL 模式（SMTP_SSL）
             elif smtp_port == 587:
                 use_tls = True   # TLS 模式（STARTTLS）
             else:
