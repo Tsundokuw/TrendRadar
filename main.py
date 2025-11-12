@@ -28,7 +28,7 @@ SMTP_CONFIGS = {
     # Gmail（使用 STARTTLS）
     "gmail.com": {"server": "smtp.gmail.com", "port": 587, "encryption": "TLS"},
     # QQ邮箱（使用 SSL，更稳定）
-    "qq.com": {"server": "smtp.qq.com", "port": 587, "encryption": "SSL"},
+    "qq.com": {"server": "smtp.qq.com", "port": 465, "encryption": "SSL"},
     # Outlook（使用 STARTTLS）
     "outlook.com": {
         "server": "smtp-mail.outlook.com",
