@@ -4375,7 +4375,7 @@ class NewsAnalyzer:
             print("爬虫功能已禁用（ENABLE_CRAWLER=False），程序退出")
             return
 
-        has_notification = self._has_notification_configured()
+        has_notification = True
         if not CONFIG["ENABLE_NOTIFICATION"]:
             print("通知功能已禁用（ENABLE_NOTIFICATION=False），将只进行数据抓取")
         elif not has_notification:
